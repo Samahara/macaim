@@ -21,13 +21,19 @@ button[type=submit].save:hover {
   border: none;
   padding: .15rem .25rem;
 }
+#accordionMenu1 .card-body {
+  color: #FFFFFF;
+  padding: .5rem .25rem;
+}
 #accordionMenu1 .card-header .btn-link {
   color: #FFFFFF;
+  display: flex;
   padding: .375rem 0;
   text-decoration: none;
 }
-#accordionMenu1 .card-body {
-  padding: .5rem .25rem;
+#accordionMenu1 .btn-link i {
+  position: absolute;
+  right: 5px;
 }
 #add-event button {
   background-color: #FFFFFF;
@@ -101,6 +107,24 @@ button[type=submit].save:hover {
   color: #FFFFFF;
   text-transform: uppercase;
 }
+#customCheck1:checked~.custom-control-label::after {
+  background-color: #E2DB2D;
+  background-image: none;
+  border: 1px solid #E2DB2D;
+  border-radius: 0.15rem;
+}
+#customCheck2:checked~.custom-control-label::after {
+  background-color: #2DE23F;
+  background-image: none;
+  border: 1px solid #2DE23F;
+  border-radius: 0.15rem;
+}
+#customCheck3:checked~.custom-control-label::after {
+  background-color: #2DE2D7;
+  background-image: none;
+  border: 1px solid #2DE2D7;
+  border-radius: 0.15rem;
+}
 #my_calendar {
   max-height: 84.9vh;
   overflow-y: scroll;
@@ -170,6 +194,10 @@ button[type=submit].save:hover {
   width: 100%;
   z-index: 99;
 }
+.btn-google {
+  color: #FFFFFF;
+  text-align: left;
+}
 .card_appointments {
   background-color: rgba(51, 51, 51, 0.5);
   color: white;
@@ -198,10 +226,18 @@ button[type=submit].save:hover {
 .cursor-pointer {
   cursor: pointer;
 }
-.donc [aria-expanded="false"] .fas:before {
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow:none !important;
+}
+.custom-control-label::before {
+  background-color: transparent;
+  border: 1px solid rgba(251, 251, 251, .8);
+  border-radius: 0.15rem;
+}
+#my_events .card [aria-expanded="false"] .fas:before {
   content: "\f078";
 }
-.donc [aria-expanded="true"] .fas:before {
+#my_events .card [aria-expanded="true"] .fas:before {
   content: "\f077";
 }
 .nav-text {
