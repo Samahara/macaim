@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Calendario Doctor</title>
+  </head>
+  <body>
+    <nav id="navbar-calendar" class="navbar navbar-expand-lg navbar-light">
+      <div class="col-2 p-0">
+        <button class="navbar-toggler-left" type="button" data-toggle="collapse" data-target="#collapseMenuCalendar" aria-controls="collapseMenuCalendar" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars collapse-icon"></i>
+        </button>
+      </div>
+      <div class="col-4 p-0">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <p class="nav-text">Enero <span>2019</span></p>
+          </li>
+          <li class="nav-item d-none d-md-block">
+            <p class="nav-text">
+              <span class="cursor-pointer"><i class="fas fa-chevron-left color-icons-immer"></i></span>
+              <span class="cursor-pointer"><i class="fas fa-chevron-right color-icons-immer"></i></span>
+            </p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-6 p-0">
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Calendario
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Mes</a>
+              <a class="dropdown-item" href="#">Semana</a>
+              <a class="dropdown-item" href="#">Día</a>
+              <a class="dropdown-item" href="#">Lista</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <p class="nav-text cursor-pointer"><i class="far fa-question-circle color-icons-immer"></i></p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="" id="collapseMenuCalendar">
+          <div id="add-event">
+            <button type="button" name="button"><i class="fas fa-plus color-icons-immer"></i><p>Agregar</p></button>
+          </div>
+          <!-- Container lista menú lateral -->
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="events_calendar" role="tabpanel" aria-labelledby="events_calendar-tab">
+              <div class="" id="calendar">
+                Calendario
+              </div>
+              <div class="" id="my_events">
+                <div class="accordion" id="accordionMenu1">
+                  <div class="card donc">
+                    <div class="card-header" id="headingOne">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Mis eventos <i class="fas"></i>
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionMenu1">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card donc">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Mis calendarios <i class="fas"></i>
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionMenu1">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pending_appointments" role="tabpanel" aria-labelledby="pending_appointments-tab">
+              <div class="">
+                Citas pendientes
+              </div>
+            </div>
+            <div class="tab-pane fade" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+              <nav id="navbar-settings" class="navbar navbar-expand-lg navbar-light">
+                <div class="col-6 p-0">
+                  <button class="navbar-back-menu" type="button">
+                    <i class="fas fa-arrow-left"></i> Configuraciones
+                  </button>
+                </div>
+                <div class="col-6 p-0">
+                  <ul class="navbar-nav justify-content-end">
+                    <li class="nav-item">
+                      <p class="nav-text video-text"><i class="far fa-question-circle"></i> ¿Cómo configurar mi calendario público?</p>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              <div class="container-fluid">
+                <div class="row">
+                  <div id="collapseMenuSettings">
+                    <div class="title">
+                      <p>General</p>
+                    </div>
+                    <div class="list-menu-settings">
+                      <p>Calendario público</p>
+                    </div>
+                  </div>
+                  <div id="my_calendar">
+                    <div class="col-12">
+                      <p>Activar mi calendario público
+                        <button class="btn no-bxsha" type="button" data-toggle="collapse" data-target="#collapseMyCalendar" aria-expanded="false" aria-controls="collapseMyCalendar">
+                          <i class="fas fa-toggle-off toggle-icon"></i>
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseMyCalendar">
+                        <div class="col-12 mb-5">
+                          <strong>Al activar el calendario público, tus pacientes podrán mandarte solicitud de consultas
+                            en los días y horarios que establezcas en la siguiente sección.</strong>
+                        </div>
+                        <div class="col-4 mb-4">
+                          <button type="button" class="btn mb-4 no-bxsha pl-0" data-container="body" data-toggle="popover" data-placement="right" data-content="Configura la duración de la consulta que puede solicitar tu paciente.">
+                            Configuración de las consultas públicas
+                          </button>
+                          <select class="custom-select">
+                            <option selected>Duración predeterminada</option>
+                            <option value="1">15 minutos</option>
+                            <option value="2">20 minutos</option>
+                            <option value="3">25 minutos</option>
+                            <option value="4">30 minutos</option>
+                            <option value="5">35 minutos</option>
+                            <option value="6">40 minutos</option>
+                            <option value="7">45 minutos</option>
+                            <option value="8">50 minutos</option>
+                            <option value="9">55 minutos</option>
+                            <option value="10">60 minutos</option>
+                          </select>
+                        </div>
+                        <div class="col-12 mb-4" id="myTimes">
+                          <button type="button" class="btn mb-4 no-bxsha pl-0" data-container="body" data-toggle="popover" data-placement="right" data-content="Configura los días y horarios en los que puedes atender a tus pacientes.">
+                            Calendario de consultas
+                          </button>
+                          <div class="row">
+                              <div class="col-4">
+                                <p class="text-uppercase color-icons-immer">Día</p>
+                              </div>
+                              <div class="col-8">
+                                <p class="text-uppercase color-icons-immer">Horario de consulta</p>
+                              </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseLunes" aria-expanded="false" aria-controls="collapseLunes">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Lunes
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseLunes">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseMartes" aria-expanded="false" aria-controls="collapseMartes">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Martes
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseMartes">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseMiercoles" aria-expanded="false" aria-controls="collapseMiercoles">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Miércoles
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseMiercoles">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseJueves" aria-expanded="false" aria-controls="collapseJueves">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Jueves
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseJueves">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseViernes" aria-expanded="false" aria-controls="collapseViernes">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Viernes
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseViernes">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseSabado" aria-expanded="false" aria-controls="collapseSabado">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Sábado
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseSabado">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-4">
+                              <p class="mb-0">
+                                <button class="btn no-bxsha pb-0 pl-0 pt-0" type="button" data-toggle="collapse" data-target="#collapseDomingo" aria-expanded="false" aria-controls="collapseDomingo">
+                                  <i class="far fa-circle color-icons-immer"></i>
+                                </button>
+                                Domingo
+                              </p>
+                            </div>
+                            <div class="col-8">
+                              <div class="collapse" id="collapseDomingo">
+                                <form>
+                                  <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <div class="input-group">
+                                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Username">
+                                      </div>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha save">Guardar</button>
+                                    </div>
+                                    <div class="col-auto">
+                                      <button type="submit" class="btn no-bxsha"><i class="fas fa-plus"></i></button>
+                                    </div>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- lista de menú lateral -->
+          <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="events_calendar-tab" data-toggle="tab" href="#events_calendar" role="tab" aria-controls="events_calendar" aria-selected="true"><i class="fas fa-calendar-alt"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="pending_appointments-tab" data-toggle="tab" href="#pending_appointments" role="tab" aria-controls="pending_appointments" aria-selected="false"><i class="far fa-address-card"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false"><i class="fas fa-cog"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="" id="container_calendar">
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a79f95d4bd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="popover"]').popover()
+      })
+    </script>
+  </body>
+</html>
