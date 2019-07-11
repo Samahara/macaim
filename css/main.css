@@ -99,6 +99,12 @@ button[type=submit].save:hover {
 #calendar p {
   font-size: 16px;
 }
+#calendar_time_day,
+#calendar_day,
+#calendar_time_week,
+#calendar_week {
+  margin-top: 60px;
+}
 #collapseMenuCalendar {
   background: linear-gradient(to bottom, rgba(250, 38, 127, .7), rgba(246, 54, 77, .7));
   min-height: 610px;
@@ -155,6 +161,21 @@ button[type=submit].save:hover {
   max-height: 610px;
   width: calc(100% - 256px);
 }
+#container_calendar_2,
+#container_calendar_3 {
+  max-height: 610px;
+  overflow-y: scroll;
+  width: calc(100% - 256px);
+}
+#container_calendar_2::-webkit-scrollbar,
+#container_calendar_3::-webkit-scrollbar {
+	width: 4px;
+}
+#container_calendar_2::-webkit-scrollbar-thumb,
+#container_calendar_3::-webkit-scrollbar-thumb {
+	background-color: #33333365;
+	border-radius: 5px;
+}
 #container_calendar .col-auto {
   border: .5px solid #cccccc;
   cursor: pointer;
@@ -163,10 +184,68 @@ button[type=submit].save:hover {
   text-align: center;
   width: calc(100%/7);
 }
+#container_calendar_2 .col-auto {
+  background-color: #FFFFFF;
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: 60px;
+  padding: 6px;
+  text-align: center;
+  width: calc(100%/7);
+}
+#container_calendar_3 .col-auto {
+  background-color: #FFFFFF;
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: 60px;
+  padding: 6px;
+  text-align: center;
+  width: calc(100%/7);
+}
+#container_calendar_2 .col-auto-time {
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: 44px;
+  padding: 6px;
+  text-align: center;
+  width: calc(100%/7);
+}
+#container_calendar_3 .col-auto-time {
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: 44px;
+  padding: 6px;
+  text-align: center;
+  width: 100%;
+}
+#container_calendar_2 .col-auto-times,
+#container_calendar_3 .col-auto-times {
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: 44px;
+  padding: 6px;
+  text-align: center;
+  width: 100%;
+}
+#container_calendar_2 .col-auto-times p,
+#container_calendar_3 .col-auto-times p {
+  background-color: #FFFFFF;
+  margin: 24px -6px;
+  position: sticky;
+  width: 80px;
+}
+#container_calendar p.titleCal,
+#container_calendar_2 p.titleCal,
+#container_calendar_3 p.titleCal {
+  line-height: 16px;
+  height: 18px;
+  margin: 0 auto;
+  width: 40px;
+}
 #container_calendar p {
-  width: 30px;
   height: 30px;
   margin: 0 auto;
+  width: 30px;
 }
 #container_calendar p.todayis {
   background-color: rgba(250, 38, 127, 0.3);
@@ -371,6 +450,12 @@ button[type=submit].save:hover {
   width: 100%;
   z-index: 99;
 }
+#title_calendar_day .row,
+#title_calendar_week .row {
+  position: fixed;
+  width: 74.195%;
+  z-index: 9;
+}
 .card_appointments {
   background-color: rgba(51, 51, 51, 0.5);
   color: white;
@@ -407,6 +492,15 @@ button[type=submit].save:hover {
   border: 1px solid rgba(251, 251, 251, .8);
   border-radius: 0.15rem;
 }
+.event_cirugia {
+  color: #E2DB2D;
+}
+.event_consulta {
+  color: #2DE23F;
+}
+.event_personal {
+  color: #2DE2D7;
+}
 .menuResumeEvent {
   color: #757575;
   padding: 0 .75rem .375rem .75rem;
@@ -433,6 +527,57 @@ button[type=submit].save:hover {
   background-color: transparent;
   border: none;
   outline: none!important;
+}
+#container_calendar .new_event {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  height: 25px;
+  outline: none!important;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  word-break: break-all;
+}
+#calendar_day i,
+#calendar_week i {
+  display: none;
+}
+#calendar_day .new_event.consulta,
+#calendar_week .new_event.consulta {
+  background-color: #2DE23F;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_day .new_event.cirugia,
+#calendar_week .new_event.cirugia {
+  background-color: #E2DB2D;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_day .new_event.personal,
+#calendar_week .new_event.personal {
+  background-color: #2DE2D7;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
 }
 .no-bxsha {
   box-shadow: none!important;

@@ -585,16 +585,16 @@
             </li>
           </ul>
         </div>
-        <div id="container_calendar">
+        <div class="d-none" id="container_calendar">
           <div class="col-12">
             <div class="row">
-              <div class="col-auto"><p>1</p></div>
-              <div class="col-auto"><p>2</p></div>
-              <div class="col-auto"><p>3</p></div>
-              <div class="col-auto"><p>4</p></div>
-              <div class="col-auto"><p>5</p></div>
-              <div class="col-auto"><p>6</p></div>
-              <div class="col-auto"><p>7</p></div>
+              <div class="col-auto"><p class="titleCal">Dom</p><p>1</p></div>
+              <div class="col-auto"><p class="titleCal">Lun</p><p>2</p></div>
+              <div class="col-auto"><p class="titleCal">Mar</p><p>3</p></div>
+              <div class="col-auto"><p class="titleCal">Mié</p><p>4</p></div>
+              <div class="col-auto"><p class="titleCal">Jue</p><p>5</p></div>
+              <div class="col-auto"><p class="titleCal">Vie</p><p>6</p></div>
+              <div class="col-auto"><p class="titleCal">Sáb</p><p>7</p></div>
             </div>
             <div class="row">
               <div class="col-auto"><p>8</p></div>
@@ -610,7 +610,10 @@
               <div class="col-auto"><p>16</p></div>
               <div class="col-auto"><p>17</p></div>
               <div class="col-auto"><p class="todayis">18</p></div>
-              <div class="col-auto"><p>19</p></div>
+              <div class="col-auto">
+                <p>19</p>
+                <button class="new_event" type="button" name="button" data-toggle="modal" data-target="#resumeEventModal"><i class="fas fa-circle event_consulta"></i><span>10:00 am</span> Rodrigo Hyeong Hernández</button>
+              </div>
               <div class="col-auto"><p>20</p></div>
               <div class="col-auto"><p>21</p></div>
             </div>
@@ -631,6 +634,494 @@
               <div class="col-auto"><p>2</p></div>
               <div class="col-auto"><p>3</p></div>
               <div class="col-auto"><p>4</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="col d-none" id="container_calendar_2">
+          <div class="row">
+            <div class="col-1">
+              <div class="row" style="position: fixed; width: 6.75%; z-index: 9;">
+                <div style="background-color: #FFFFFF; border: .5px solid #cccccc; cursor: pointer; height: 60px; padding: 6px; text-align: center; width:100%;"></div>
+              </div>
+            </div>
+            <div class="col-11" id="title_calendar_week">
+              <div class="row">
+                <div class="col-auto"><p class="titleCal">Dom</p><p>1</p></div>
+                <div class="col-auto"><p class="titleCal">Lun</p><p>2</p></div>
+                <div class="col-auto"><p class="titleCal">Mar</p><p>3</p></div>
+                <div class="col-auto"><p class="titleCal">Mié</p><p>4</p></div>
+                <div class="col-auto"><p class="titleCal">Jue</p><p>5</p></div>
+                <div class="col-auto"><p class="titleCal">Vie</p><p>6</p></div>
+                <div class="col-auto"><p class="titleCal">Sáb</p><p>7</p></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1" id="calendar_time_week">
+              <div class="row">
+                <div class="col-auto-times"><p>1 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>2 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>3 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>4 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>5 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>6 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>7 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>8 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>9 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>10 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>11 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>12 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>1 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>2 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>3 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>4 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>5 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>6 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>7 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>8 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>9 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>10 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>11 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"></div>
+              </div>
+            </div>
+            <div class="col-11" id="calendar_week">
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time">
+                  <button class="new_event consulta" type="button" name="button" data-toggle="modal" data-target="#resumeEventModal"><i class="fas fa-circle event_consulta"></i><span>10:00 am</span> Rodrigo Hyeong Hernández</button>
+                </div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+                <div class="col-auto-time"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" id="container_calendar_3">
+          <div class="row">
+            <div class="col-1">
+              <div class="row" style="position: fixed; width: 6.75%; z-index: 9;">
+                <div style="background-color: #FFFFFF; border: .5px solid #cccccc; cursor: pointer; height: 60px; padding: 6px; text-align: center; width:100%;"></div>
+              </div>
+            </div>
+            <div class="col-11" id="title_calendar_day">
+              <div class="row">
+                <div class="col-auto" style="border-right-color: transparent;"><p class="titleCal">Dom</p><p>1</p></div>
+                <div class="col-auto" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                <div class="col-auto" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                <div class="col-auto" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                <div class="col-auto" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                <div class="col-auto" style="border-left-color: transparent; border-right-color: transparent;"></div>
+                <div class="col-auto" style="border-left-color: transparent;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1" id="calendar_time_day">
+              <div class="row">
+                <div class="col-auto-times"><p>1 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>2 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>3 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>4 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>5 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>6 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>7 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>8 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>9 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>10 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>11 am</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>12 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>1 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>2 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>3 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>4 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>5 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>6 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>7 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>8 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>9 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>10 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"><p>11 pm</p></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-times"></div>
+              </div>
+            </div>
+            <div class="col-11" id="calendar_day">
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time">
+                  <button class="new_event consulta" type="button" name="button" data-toggle="modal" data-target="#resumeEventModal"><i class="fas fa-circle event_consulta"></i><span>10:00 am</span> Rodrigo Hyeong Hernández</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
+              <div class="row">
+                <div class="col-auto-time"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -819,9 +1310,9 @@
     </div>
 
     <!-- Modal Detalle -->
-    <div id="">
+    <!-- <div>
       <button type="button" name="button" data-toggle="modal" data-target="#resumeEventModal">Evento creado</button>
-    </div>
+    </div> -->
 
     <div class="modal fade" id="resumeEventModal" tabindex="-1" role="dialog" aria-labelledby="resumeEventTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
