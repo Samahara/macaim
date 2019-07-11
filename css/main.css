@@ -81,8 +81,23 @@ button[type=submit].save:hover {
   vertical-align: top;
 }
 #calendar {
+  color: #FFFFFF;
+  font-size: 14px;
   margin-bottom: 20px;
   min-height: 220px;
+}
+#calendar .col-auto {
+  cursor: pointer;
+  padding: 6px;
+  text-align: center;
+  width: calc(100%/7);
+}
+#calendar .col-auto.todayis {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+}
+#calendar p {
+  font-size: 16px;
 }
 #collapseMenuCalendar {
   background: linear-gradient(to bottom, rgba(250, 38, 127, .7), rgba(246, 54, 77, .7));
