@@ -114,6 +114,9 @@ button[type=submit].save:hover {
 #collapseMenuCalendar.collapse:not(.show) #myTabContent {
   display: none;
 }
+#collapseMenuCalendar.collapse:not(.show) + #container_calendar {
+  width: calc(100% - 64px);
+}
 #collapseMenuCalendar.collapse:not(.show) #myTab {
   border-bottom: none;
   justify-content: center!important;
@@ -147,6 +150,27 @@ button[type=submit].save:hover {
   border-bottom: 1px solid #FFFFFF;
   color: #FFFFFF;
   text-transform: uppercase;
+}
+#container_calendar {
+  max-height: 610px;
+  width: calc(100% - 256px);
+}
+#container_calendar .col-auto {
+  border: .5px solid #cccccc;
+  cursor: pointer;
+  height: calc(92.92vh/5);
+  padding: 6px;
+  text-align: center;
+  width: calc(100%/7);
+}
+#container_calendar p {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+#container_calendar p.todayis {
+  background-color: rgba(250, 38, 127, 0.3);
+  border-radius: 100%;
 }
 #customCheck1:checked~.custom-control-label::after,
 .cirugiaTitle i {
