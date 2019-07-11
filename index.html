@@ -536,7 +536,8 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
+
+    <!-- Modal Agregar -->
     <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -702,6 +703,197 @@
                       <div class="input-group">
                         <i class="fas fa-align-left"></i>
                         <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn cancel" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn save">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Detalle -->
+    <div id="add-event">
+      <button type="button" name="button" data-toggle="modal" data-target="#resumeEventModal">Evento creado</button>
+    </div>
+    <div class="modal fade" id="resumeEventModal" tabindex="-1" role="dialog" aria-labelledby="resumeEventTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header col-12">
+            <button type="button" class="btn menuResumeEvent">
+              <i class="fas fa-pencil-alt"></i>
+            </button>
+            <button type="button" class="btn menuResumeEvent">
+              <i class="far fa-trash-alt"></i>
+            </button>
+            <button type="button" class="btn menuResumeEvent">
+              <i class="far fa-envelope"></i>
+            </button>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body col-12">
+            <div class="modal-title" id="resumeEventTitle">
+              <div class="form-group">
+                <input type="text" class="form-control" id="titleResumeEventModal" placeholder="Agregar título">
+              </div>
+              <p class="titleResumeEventModal cirugiaTitle"><i class="fas fa-square"></i> Título cirugía</p>
+              <p class="titleResumeEventModal consultaTitle"><i class="fas fa-square"></i> Título consulta</p>
+              <p class="titleResumeEventModal personalTitle"><i class="fas fa-square"></i> Título personal</p>
+            </div>
+            <div class="tab-content" id="pills-tabContentResume">
+              <div id="pills-consultasResume" role="tabpanel" aria-labelledby="pills-consultas-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">20/02/2019</p>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-child"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar paciente">
+                        <p class="resumeText">Rodrigo Hyeong Hernández</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar lugar">
+                        <p class="resumeText" style="width: 95%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                        <p class="resumeText" style="width: 95%;">Pellentesque condimentum dolor enim.
+                          Nam imperdiet molestie libero vitae euismod.
+                          Proin ex est, accumsan non volutpat at, sagittis ac magna.</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div id="pills-cirugiaResume" role="tabpanel" aria-labelledby="pills-cirugia-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">20/02/2019</p>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-child"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar paciente">
+                        <p class="resumeText">Rodrigo Hyeong Hernández</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar lugar">
+                        <p class="resumeText" style="width: 95%;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                        <p class="resumeText" style="width: 95%;">Pellentesque condimentum dolor enim.
+                          Nam imperdiet molestie libero vitae euismod.
+                          Proin ex est, accumsan non volutpat at, sagittis ac magna.</p>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div id="pills-personalResume" role="tabpanel" aria-labelledby="pills-personalResume-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">20/02/2019</p>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <p class="resumeText">12:00 pm</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                        <p class="resumeText" style="width: 95%;">Pellentesque condimentum dolor enim.
+                          Nam imperdiet molestie libero vitae euismod.
+                          Proin ex est, accumsan non volutpat at, sagittis ac magna.</p>
                       </div>
                     </div>
                   </div>

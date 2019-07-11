@@ -133,23 +133,29 @@ button[type=submit].save:hover {
   color: #FFFFFF;
   text-transform: uppercase;
 }
-#customCheck1:checked~.custom-control-label::after {
+#customCheck1:checked~.custom-control-label::after,
+.cirugiaTitle i {
   background-color: #E2DB2D;
   background-image: none;
   border: 1px solid #E2DB2D;
   border-radius: 0.15rem;
+  color: #E2DB2D;
 }
-#customCheck2:checked~.custom-control-label::after {
+#customCheck2:checked~.custom-control-label::after,
+.consultaTitle i {
   background-color: #2DE23F;
   background-image: none;
   border: 1px solid #2DE23F;
   border-radius: 0.15rem;
+  color: #2DE23F;
 }
-#customCheck3:checked~.custom-control-label::after {
+#customCheck3:checked~.custom-control-label::after,
+.personalTitle i {
   background-color: #2DE2D7;
   background-image: none;
   border: 1px solid #2DE2D7;
   border-radius: 0.15rem;
+  color: #2DE2D7;
 }
 #customCheck4:checked~.custom-control-label::after,
 #customCheck5:checked~.custom-control-label::after {
@@ -232,12 +238,24 @@ button[type=submit].save:hover {
 #pills-personal-tab {
   color: #757575;
 }
+#pills-cirugiaResume input,
+#pills-consultasResume input,
+#pills-personalResume input,
 #pills-cirugia input,
 #pills-consultas input,
 #pills-personal input {
   color: #757575;
   border: none;
   font-size: 14px;
+}
+#pills-cirugiaResume p.resumeText,
+#pills-consultasResume p.resumeText,
+#pills-personalResume p.resumeText {
+  border: none;
+  color: #757575;
+  font-size: 14px;
+  margin-bottom: 0;
+  padding: .375rem .75rem;
 }
 #pills-cirugia i,
 #pills-consultas i,
@@ -246,9 +264,24 @@ button[type=submit].save:hover {
   font-size: 18px;
   padding: .375rem .1rem;
 }
+#pills-cirugiaResume i,
+#pills-consultasResume i,
+#pills-personalResume i {
+  color: #757575;
+  font-size: 18px;
+  padding: .375rem .1rem;
+}
 #pills-cirugia textarea,
 #pills-consultas textarea,
 #pills-personal textarea {
+  color: #757575;
+  border: none;
+  font-size: 14px;
+  resize: none;
+}
+#pills-cirugiaResume textarea,
+#pills-consultasResume textarea,
+#pills-personalResume textarea {
   color: #757575;
   border: none;
   font-size: 14px;
@@ -266,6 +299,30 @@ button[type=submit].save:hover {
   border: 1px solid rgba(250, 38, 127, 0.25);
   border-radius: 0.15rem;
 }
+#pills-tabContentResume .resume {
+  margin-left: 5%;
+  width: 95%;
+}
+#resumeEventTitle {
+  width: 100%;
+}
+#resumeEventTitle input {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+}
+#resumeEventModal .modal-header button:nth-child(1) {
+  margin-left: auto;
+}
+#resumeEventModal .modal-header .close {
+  margin: -1rem -1rem -1rem 0;
+}
+.btn-google {
+  color: #FFFFFF;
+  text-align: left;
+}
 #settings.tab-pane.active {
   background-color: #FFFFFF;
   height: 92vh;
@@ -274,10 +331,6 @@ button[type=submit].save:hover {
   top: 0;
   width: 100%;
   z-index: 99;
-}
-.btn-google {
-  color: #FFFFFF;
-  text-align: left;
 }
 .card_appointments {
   background-color: rgba(51, 51, 51, 0.5);
@@ -315,6 +368,14 @@ button[type=submit].save:hover {
   border: 1px solid rgba(251, 251, 251, .8);
   border-radius: 0.15rem;
 }
+.menuResumeEvent {
+  color: #757575;
+  padding: 0 .75rem .375rem .75rem;
+}
+.modal-footer {
+  padding: 0 1rem 1rem;
+  border-top: none;
+}
 .modal-header {
   padding: 1rem 1rem 0;
   border-bottom: none;
@@ -340,6 +401,10 @@ button[type=submit].save:hover {
 .no_pending_appointments p {
   color: #FFFFFF;
   text-align: center;
+}
+.titleResumeEventModal {
+  color: #757575;
+  margin-bottom: 0;
 }
 .video-text {
   color: #757575;
