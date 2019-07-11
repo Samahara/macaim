@@ -49,9 +49,9 @@
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <div class="" id="collapseMenuCalendar">
+        <div id="collapseMenuCalendar">
           <div id="add-event">
-            <button type="button" name="button"><i class="fas fa-plus color-icons-immer"></i><p>Agregar</p></button>
+            <button type="button" name="button" data-toggle="modal" data-target="#addEventModal"><i class="fas fa-plus color-icons-immer"></i><p>Agregar</p></button>
           </div>
           <!-- Container lista menú lateral -->
           <div class="tab-content" id="myTabContent">
@@ -59,7 +59,7 @@
               <div class="" id="calendar">
                 Calendario
               </div>
-              <div class="" id="my_events">
+              <div id="my_events">
                 <div class="accordion" id="accordionMenu1">
                   <div class="card">
                     <div class="card-header" id="headingOne">
@@ -87,7 +87,7 @@
                     </div>
                   </div>
 
-                  <div class="card">
+                  <!-- <div class="card">
                     <div class="card-header" id="headingTwo">
                       <h2 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -102,7 +102,7 @@
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -130,7 +130,7 @@
                       <button type="button" class="btn btn-outline-light no-bxsha">Rechazar</button>
                     </div>
                     <div class="col-6">
-                      <button type="button" class="btn btn-outline-light no-bxsha">Agregar</button>
+                      <button type="button" class="btn btn-outline-light no-bxsha" data-toggle="modal" data-target="#addEventModal">Agregar</button>
                     </div>
                   </div>
                 </div>
@@ -153,7 +153,7 @@
                       <button type="button" class="btn btn-outline-light no-bxsha">Rechazar</button>
                     </div>
                     <div class="col-6">
-                      <button type="button" class="btn btn-outline-light no-bxsha">Agregar</button>
+                      <button type="button" class="btn btn-outline-light no-bxsha" data-toggle="modal" data-target="#addEventModal">Agregar</button>
                     </div>
                   </div>
                 </div>
@@ -176,7 +176,7 @@
                       <button type="button" class="btn btn-outline-light no-bxsha">Rechazar</button>
                     </div>
                     <div class="col-6">
-                      <button type="button" class="btn btn-outline-light no-bxsha">Agregar</button>
+                      <button type="button" class="btn btn-outline-light no-bxsha" data-toggle="modal" data-target="#addEventModal">Agregar</button>
                     </div>
                   </div>
                 </div>
@@ -199,7 +199,7 @@
                       <button type="button" class="btn btn-outline-light no-bxsha">Rechazar</button>
                     </div>
                     <div class="col-6">
-                      <button type="button" class="btn btn-outline-light no-bxsha">Agregar</button>
+                      <button type="button" class="btn btn-outline-light no-bxsha" data-toggle="modal" data-target="#addEventModal">Agregar</button>
                     </div>
                   </div>
                 </div>
@@ -533,6 +533,186 @@
         </div>
         <div class="" id="container_calendar">
 
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="addEventModal" tabindex="-1" role="dialog" aria-labelledby="addEventModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header col-12">
+            <div class="modal-title" id="addEventModalTitle">
+              <div class="form-group">
+                <input type="text" class="form-control" id="titleEventModal" placeholder="Agregar título">
+              </div>
+            </div>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body col-12">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="pills-consultas-tab" data-toggle="pill" href="#pills-consultas" role="tab" aria-controls="pills-consultas" aria-selected="true">Consulta</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-cirugia-tab" data-toggle="pill" href="#pills-cirugia" role="tab" aria-controls="pills-cirugia" aria-selected="false">Cirugía</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="pills-personal-tab" data-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="false">Personal</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane fade show active" id="pills-consultas" role="tabpanel" aria-labelledby="pills-consultas-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-child"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar paciente">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar lugar">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                        <label class="custom-control-label" for="customCheck4">Conectar con Google Calendar</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-cirugia" role="tabpanel" aria-labelledby="pills-cirugia-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-child"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar paciente">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar lugar">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                        <label class="custom-control-label" for="customCheck5">Conectar con Google Calendar</label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="pills-personal" role="tabpanel" aria-labelledby="pills-personal-tab">
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-calendar-day"></i>
+                        <input type="date" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="far fa-clock"></i>
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                        <span>- </span>
+                      </div>
+                    </div>
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <input type="time" class="form-control no-bxsha" id="inlineFormInputGroup">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto mb-2">
+                      <div class="input-group">
+                        <i class="fas fa-align-left"></i>
+                        <textarea name="name" rows="3" cols="60" type="text" class="form-control no-bxsha" id="inlineFormInputGroup" placeholder="Agregar descripción"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn cancel" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn save">Guardar</button>
+          </div>
         </div>
       </div>
     </div>

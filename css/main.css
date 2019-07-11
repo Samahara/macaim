@@ -1,13 +1,26 @@
+input[type=date]::-webkit-outer-spin-button,
+input[type=date]::-webkit-inner-spin-button,
 input[type=time]::-webkit-outer-spin-button,
 input[type=time]::-webkit-inner-spin-button {
   margin: 0;
   -webkit-appearance: none;
 }
+button[type=button].cancel {
+  color: rgba(51, 51, 51, 0.45);
+  margin-bottom: .5rem;
+}
+button[type=button].cancel:hover {
+  border: 1px solid rgba(51, 51, 51, 0.65);
+  color: rgba(51, 51, 51, 0.65);
+  margin-bottom: .5rem;
+}
+button[type=button].save,
 button[type=submit].save {
   border: 1px solid #F22973;
   color: #F22973;
   margin-bottom: .5rem;
 }
+button[type=button].save:hover,
 button[type=submit].save:hover {
   background-color: #F22973;
   color: #FFFFFF;
@@ -30,10 +43,23 @@ button[type=submit].save:hover {
   display: flex;
   padding: .375rem 0;
   text-decoration: none;
+  width: 100%;
 }
 #accordionMenu1 .btn-link i {
   position: absolute;
-  right: 5px;
+  right: 6px;
+  top: 14px;
+}
+#addEventModalTitle {
+  margin-left: 5%;
+  width: 95%;
+}
+#addEventModalTitle input {
+  border: none;
+  border-bottom: 1px solid #ced4da;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
 }
 #add-event button {
   background-color: #FFFFFF;
@@ -125,6 +151,13 @@ button[type=submit].save:hover {
   border: 1px solid #2DE2D7;
   border-radius: 0.15rem;
 }
+#customCheck4:checked~.custom-control-label::after,
+#customCheck5:checked~.custom-control-label::after {
+  background-color: #FA267F;
+  background-image: none;
+  border: 1px solid #FA267F;
+  border-radius: 0.15rem;
+}
 #my_calendar {
   max-height: 84.9vh;
   overflow-y: scroll;
@@ -144,6 +177,12 @@ button[type=submit].save:hover {
 #my_calendar [aria-expanded="true"] .fas:before {
   color: #f22973;
   content: "\f205";
+}
+#my_events .card [aria-expanded="false"] .fas:before {
+  content: "\f078";
+}
+#my_events .card [aria-expanded="true"] .fas:before {
+  content: "\f077";
 }
 #myTimes [aria-expanded="true"] .far:before {
   color: #f22973;
@@ -184,6 +223,48 @@ button[type=submit].save:hover {
 #pending_appointments::-webkit-scrollbar-thumb {
 	background-color: rgba(251, 251, 251, 0.5);
 	border-radius: 5px;
+}
+#pills-cirugia,
+#pills-consultas,
+#pills-personal,
+#pills-cirugia-tab,
+#pills-consultas-tab,
+#pills-personal-tab {
+  color: #757575;
+}
+#pills-cirugia input,
+#pills-consultas input,
+#pills-personal input {
+  color: #757575;
+  border: none;
+  font-size: 14px;
+}
+#pills-cirugia i,
+#pills-consultas i,
+#pills-personal i {
+  color: #757575;
+  font-size: 18px;
+  padding: .375rem .1rem;
+}
+#pills-cirugia textarea,
+#pills-consultas textarea,
+#pills-personal textarea {
+  color: #757575;
+  border: none;
+  font-size: 14px;
+  resize: none;
+}
+#pills-cirugia-tab.active,
+#pills-consultas-tab.active,
+#pills-personal-tab.active {
+  background-color: rgba(250, 38, 127, 0.25);
+  color: #FA267F;
+}
+#pills-cirugia .custom-control-label::before,
+#pills-consultas .custom-control-label::before {
+  background-color: white;
+  border: 1px solid rgba(250, 38, 127, 0.25);
+  border-radius: 0.15rem;
 }
 #settings.tab-pane.active {
   background-color: #FFFFFF;
@@ -234,11 +315,9 @@ button[type=submit].save:hover {
   border: 1px solid rgba(251, 251, 251, .8);
   border-radius: 0.15rem;
 }
-#my_events .card [aria-expanded="false"] .fas:before {
-  content: "\f078";
-}
-#my_events .card [aria-expanded="true"] .fas:before {
-  content: "\f077";
+.modal-header {
+  padding: 1rem 1rem 0;
+  border-bottom: none;
 }
 .nav-text {
   display: block;
