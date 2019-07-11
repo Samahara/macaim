@@ -105,6 +105,78 @@ button[type=submit].save:hover {
 #calendar_week {
   margin-top: 60px;
 }
+#calendar_day i,
+#calendar_week i {
+  display: none;
+}
+#calendar_day .new_event.consulta,
+#calendar_week .new_event.consulta {
+  background-color: #2DE23F;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_schedule .new_event.consulta {
+  background-color: transparent;
+  border: none;
+  color: #757575;
+  font-size: 14px;
+  height: 28px;
+  overflow: hidden;
+  word-break: break-all;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_day .new_event.cirugia,
+#calendar_week .new_event.cirugia {
+  background-color: #E2DB2D;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_schedule .new_event.cirugia {
+  background-color: transparent;
+  border: none;
+  color: #757575;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_day .new_event.personal,
+#calendar_week .new_event.personal {
+  background-color: #2DE2D7;
+  border: none;
+  color: #FFFFFF;
+  position: sticky;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
+#calendar_schedule .new_event.personal {
+  background-color: transparent;
+  border: none;
+  color: #757575;
+  font-size: 14px;
+  height: auto;
+  outline: none!important;
+  text-align: left;
+  width: 100%;
+}
 #collapseMenuCalendar {
   background: linear-gradient(to bottom, rgba(250, 38, 127, .7), rgba(246, 54, 77, .7));
   min-height: 610px;
@@ -162,17 +234,20 @@ button[type=submit].save:hover {
   width: calc(100% - 256px);
 }
 #container_calendar_2,
-#container_calendar_3 {
+#container_calendar_3,
+#container_calendar_4 {
   max-height: 610px;
   overflow-y: scroll;
   width: calc(100% - 256px);
 }
 #container_calendar_2::-webkit-scrollbar,
-#container_calendar_3::-webkit-scrollbar {
+#container_calendar_3::-webkit-scrollbar,
+#container_calendar_4::-webkit-scrollbar {
 	width: 4px;
 }
 #container_calendar_2::-webkit-scrollbar-thumb,
-#container_calendar_3::-webkit-scrollbar-thumb {
+#container_calendar_3::-webkit-scrollbar-thumb,
+#container_calendar_4::-webkit-scrollbar-thumb {
 	background-color: #33333365;
 	border-radius: 5px;
 }
@@ -218,6 +293,15 @@ button[type=submit].save:hover {
   text-align: center;
   width: 100%;
 }
+#container_calendar_4 .col-auto-time {
+  border: .5px solid #cccccc;
+  border-left: none;
+  cursor: pointer;
+  height: 44px;
+  padding: 6px;
+  text-align: left;
+  width: 100%;
+}
 #container_calendar_2 .col-auto-times,
 #container_calendar_3 .col-auto-times {
   border: .5px solid #cccccc;
@@ -227,12 +311,33 @@ button[type=submit].save:hover {
   text-align: center;
   width: 100%;
 }
+#container_calendar_4 .col-auto-times {
+  border: .5px solid #cccccc;
+  border-right: none;
+  cursor: pointer;
+  font-size: 14px;
+  height: 44px;
+  padding: 6px;
+  text-align: left;
+  width: 100%;
+}
 #container_calendar_2 .col-auto-times p,
 #container_calendar_3 .col-auto-times p {
   background-color: #FFFFFF;
   margin: 24px -6px;
   position: sticky;
   width: 80px;
+}
+#container_calendar .new_event {
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  height: 25px;
+  outline: none!important;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  word-break: break-all;
 }
 #container_calendar p.titleCal,
 #container_calendar_2 p.titleCal,
@@ -492,6 +597,10 @@ button[type=submit].save:hover {
   border: 1px solid rgba(251, 251, 251, .8);
   border-radius: 0.15rem;
 }
+.day_schedule {
+  font-size: 18px;
+  font-weight: 600;
+}
 .event_cirugia {
   color: #E2DB2D;
 }
@@ -528,63 +637,15 @@ button[type=submit].save:hover {
   border: none;
   outline: none!important;
 }
-#container_calendar .new_event {
-  background-color: transparent;
-  border: none;
-  font-size: 14px;
-  height: 25px;
-  outline: none!important;
-  overflow: hidden;
-  text-align: left;
-  width: 100%;
-  word-break: break-all;
-}
-#calendar_day i,
-#calendar_week i {
-  display: none;
-}
-#calendar_day .new_event.consulta,
-#calendar_week .new_event.consulta {
-  background-color: #2DE23F;
-  border: none;
-  color: #FFFFFF;
-  position: sticky;
-  font-size: 14px;
-  height: auto;
-  outline: none!important;
-  text-align: left;
-  width: 100%;
-}
-#calendar_day .new_event.cirugia,
-#calendar_week .new_event.cirugia {
-  background-color: #E2DB2D;
-  border: none;
-  color: #FFFFFF;
-  position: sticky;
-  font-size: 14px;
-  height: auto;
-  outline: none!important;
-  text-align: left;
-  width: 100%;
-}
-#calendar_day .new_event.personal,
-#calendar_week .new_event.personal {
-  background-color: #2DE2D7;
-  border: none;
-  color: #FFFFFF;
-  position: sticky;
-  font-size: 14px;
-  height: auto;
-  outline: none!important;
-  text-align: left;
-  width: 100%;
-}
 .no-bxsha {
   box-shadow: none!important;
 }
 .no_pending_appointments p {
   color: #FFFFFF;
   text-align: center;
+}
+.time_schedule {
+  text-transform: uppercase;
 }
 .titleResumeEventModal {
   color: #757575;
