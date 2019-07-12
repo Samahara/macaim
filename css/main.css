@@ -195,6 +195,14 @@ button[type=submit].save:hover {
 #collapseMenuCalendar.collapse:not(.show) + #container_calendar {
   width: calc(100% - 64px);
 }
+#collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_3 #title_calendar_day .row,
+#collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_2 #title_calendar_week .row {
+  width: 87.1%!important;
+}
+#collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_3 > div:nth-child(1) > div.col-1 > div.row,
+#collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_2 > div:nth-child(1) div.row {
+  width: 7.9%!important;
+}
 #collapseMenuCalendar.collapse:not(.show) #myTab {
   border-bottom: none;
   justify-content: center!important;
@@ -661,23 +669,132 @@ button[type=submit].save:hover {
 }
 
 @media (max-width: 767.98px) {
-  #collapseMenuCalendar {
+  #calendar {
+    display: none;
+  }
+  #collapseMenuCalendar,
+  #collapseMenuSettings {
     min-height: 200px;
     width: 100%;
   }
+  #calendar_day .new_event.consulta,
+  #calendar_week .new_event.consulta,
+  #calendar_day .new_event.cirugia,
+  #calendar_week .new_event.cirugia,
+  #calendar_day .new_event.personal,
+  #calendar_week .new_event.personal {
+    font-size: 12px;
+    height: 24px;
+    overflow: hidden;
+  }
   #collapseMenuCalendar.collapse:not(.show) {
-    display: block;
+    display: flex;
+    padding-bottom: .5rem;
     min-height: 50px;
     width: 100%;
   }
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar {
+    max-height: 83vh;
+    width: 100%;
+  }
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_2,
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_3,
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_4 {
+    max-height: 83vh;
+  }
   #collapseMenuCalendar.collapse:not(.show) #myTab {
     justify-content: flex-end!important;
+    width: 70%;
   }
   #collapseMenuCalendar.collapse:not(.show) #myTab li {
     width: auto;
   }
   #collapseMenuCalendar.collapse:not(.show) #myTab .nav-link {
     padding: .5rem 1.25rem;
+  }
+  #collapseMenuCalendar.collapse:not(.show) #add-event {
+    width: 30%;
+  }
+  #collapseMyCalendar > div.col-4.mb-4,
+  #collapseMyCalendar > div.col-12.mb-5,
+  #collapseMyCalendar > div.col-12.mb-4 {
+    padding: 0;
+    max-width: 100%!important;
+  }
+  #container_calendar,
+  #container_calendar_2,
+  #container_calendar_3,
+  #container_calendar_4 {
+    max-height: 52vh;
+    overflow-y: scroll;
+    width: 100%;
+  }
+  #container_calendar .new_event {
+    padding: 1px;
+  }
+  #container_calendar_2 #calendar_time_day,
+  #container_calendar_2 div.col-1,
+  #container_calendar_3 #calendar_time_day,
+  #container_calendar_3 div.col-1 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+    -ms-flex: 0 0 16.666667%;
+  }
+  #container_calendar_4 #calendar_time_schedule,
+  #container_calendar_4 div.col-1 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    -ms-flex: 0 0 25%;
+  }
+  #container_calendar_2 .col-auto,
+  #container_calendar_2 .col-auto-time {
+    padding: 1px;
+  }
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_3 > div:nth-child(1) > div.col-1 > div.row,
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_2 > div:nth-child(1) > div.col-1 > div.row,
+  #container_calendar_2 > div:nth-child(1) > div.col-1 > div.row,
+  #container_calendar_3 > div:nth-child(1) > div.col-1 > div.row {
+    width: 16.5%!important;
+  }
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_3 #title_calendar_day .row,
+  #container_calendar_2 #title_calendar_week,
+  #container_calendar_2 #calendar_week,
+  #container_calendar_3 #title_calendar_day,
+  #container_calendar_3 #calendar_day {
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+    -ms-flex: 0 0 83.333333%;
+  }
+  #container_calendar_4 #title_calendar_schedule,
+  #container_calendar_4 #calendar_schedule {
+    flex: 0 0 75%;
+    max-width: 75%;
+    -ms-flex: 0 0 75%;
+  }
+  #collapseMenuCalendar.collapse:not(.show) ~ #container_calendar_2 #title_calendar_week .row {
+    flex: 0 0 82.333333%;
+    max-width: 82.333333%;
+    -ms-flex: 0 0 82.333333%;
+  }
+  #container_calendar_2 .col-auto-times p,
+  #container_calendar_3 .col-auto-times p {
+    margin: 24px 0px;
+    width: 100%;
+  }
+  #myTimes div.col-4 {
+    padding-right: 0;
+  }
+  #my_calendar {
+    background-color: white;
+    height: 51.9vh;
+    margin-top: 61.4px;
+    max-height: 51.9vh;
+    overflow-y: scroll;
+    width: 100%;
+  }
+  #myTabContent {
+    height: 140px;
+    margin-top: 20px;
   }
   #navbar-calendar .navbar-nav {
     flex-direction: row;
@@ -689,5 +806,15 @@ button[type=submit].save:hover {
   }
   #navbar-calendar .dropdown-item {
     padding: .25rem .5rem;
+  }
+  #pending_appointments {
+    height: 130px;
+  }
+  #settings.tab-pane.active {
+    height: 38.3593739vh;
+  }
+  #title_calendar_day div.row,
+  #title_calendar_week .row {
+    width: 82.5%;
   }
 }
